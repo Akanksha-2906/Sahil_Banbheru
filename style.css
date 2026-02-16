@@ -184,19 +184,27 @@ nav a:hover::after { width: 100%; }
 }
 #scrollTopBtn:hover { background-color: #b38f4d; transform: translateY(-5px); }
 
+.footer-link {
+    position: relative;
+    text-decoration: none;
+    display: inline-block; /* Essential for absolute positioning of the line */
+}
+
 .footer-link::after {
     content: '';
     position: absolute;
     width: 0;
     height: 1px;
-    bottom: -2px;
+    bottom: -1px;
     left: 0;
-    background-color: #f59e0b; /* Tailwind's amber-500 hex code */
+    background-color: #f59e0b;
     transition: width 0.3s ease-in-out;
+    display: block; /* Forces the browser to treat it as a visible element */
 }
 
 .footer-link:hover::after {
     width: 100%;
 }
+
 
 
