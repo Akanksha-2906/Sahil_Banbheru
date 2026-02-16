@@ -184,4 +184,18 @@ nav a:hover::after { width: 100%; }
 }
 #scrollTopBtn:hover { background-color: #b38f4d; transform: translateY(-5px); }
 
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #f59e0b; /* Tailwind's amber-500 hex code */
+    transition: width 0.3s ease-in-out;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
 /* .map-iframe { border: 0; } */
