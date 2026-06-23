@@ -72,8 +72,9 @@
                     <!-- <a href="https://wa.me/917498677276" class="border border-slate-500 px-8 py-3 font-bold rounded-sm hover:bg-white/5 transition flex items-center gap-2 text-white text-sm">
                 Quick Chat
             </a> -->
-                    <a href="https://mail.google.com/mail/?view=cm&to=advsahilbanbheru@gmail.com" target="_blank"
-                        rel="noopener noreferrer"
+                    <a href="mailto:advsahilbanbheru@gmail.com"
+                        onclick="handleEmailClick(event, this)"
+                        target="_blank" rel="noopener noreferrer"
                         class="border border-slate-400 px-8 py-3 font-bold rounded-sm hover:bg-white/5 transition flex items-center gap-2 text-white text-sm">
                         Office Email
                     </a>
@@ -198,12 +199,13 @@
             </div>
 
             <div>
-                <h4 class="font-bold uppercase tracking-widest text-xs mb-4 text-slate-200 text-left">Contact Details
+                <h4 class="font-bold uppercase tracking-widest text-xs mb-4 text-slate-200 text-center md:text-left">Contact Details
                 </h4>
                 <div class="space-y-1 text-sm text-slate-400">
                     <p class="flex items-center justify-center md:justify-start gap-2">
                         <span>Email:</span>
-                        <a href="https://mail.google.com/mail/?view=cm&to=advsahilbanbheru@gmail.com"
+                        <a href="mailto:advsahilbanbheru@gmail.com"
+                            onclick="handleEmailClick(event, this)"
                             class="hover:text-amber-500 text-slate-200">advsahilbanbheru@gmail.com</a>
                     </p>
 
@@ -306,6 +308,24 @@ Thank you.`;
                 navLinks.classList.toggle('hidden');
                 navLinks.classList.toggle('flex');
             });
+        }
+
+        // 4. Smart Email Handler — mobile opens native app, desktop opens Gmail web
+        function handleEmailClick(e, link) {
+            const email = 'advsahilbanbheru@gmail.com';
+            const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Let the mailto: href handle it — opens default mail app
+                return true;
+            } else {
+                // Desktop: open Gmail web compose
+                e.preventDefault();
+                window.open(
+                    'https://mail.google.com/mail/?view=cm&to=' + email,
+                    '_blank',
+                    'noopener,noreferrer'
+                );
+            }
         }
     </script>
 
