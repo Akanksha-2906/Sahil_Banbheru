@@ -1,51 +1,49 @@
-/*  1. ORIGINAL BASE STYLES */
-body { 
-    font-family: 'Inter', sans-serif; 
-    scroll-behavior: smooth; 
+/* =========================================
+   1. ORIGINAL BASE STYLES
+   ========================================= */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
 }
 
-h1, h2, h3, .font-serif { 
-    font-family: 'Crimson Pro', serif; 
+h1,
+h2,
+h3,
+.font-serif {
+    font-family: 'Crimson Pro', serif;
 }
 
-/* Hero Section */
-/* .legal-bg { 
-    background-color: #0f172a !important; 
-    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('./court.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-} */
 /* Hero Section - Updated with Background Image and Overlay */
-.legal-bg { 
-    background-color: #0f172a !important; 
-    /* The first rgba is the overlay (80% black). The second points to your image. linear-gradient(rgba(15, 23, 30, 0.6), rgba(15, 23, 42, 0.8)),*/
+.legal-bg {
+    background-color: #0f172a !important;
     background-image: url('./images/hero.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This adds a premium 'Parallax' feel as you scroll */
+    background-attachment: fixed;
     color: white;
 }
+
 /* Extra visibility for Hero Text on image backgrounds */
-.legal-bg h1, .legal-bg p {
+.legal-bg h1,
+.legal-bg p {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
 /* UI Elements */
-/* .gold-accent { color: #e2b052; } */
-   .gold-accent { color: rgb(217 119 6); }
-
-.btn-gold { 
-    background-color: #c5a059; 
-    color: white; 
-    border: none;
-    transition: all 0.3s ease; /* Added for smooth hover */
+.gold-accent {
+    color: rgb(217 119 6);
 }
 
-.btn-gold:hover { 
-    background-color: #b38f4d; 
-    transform: scale(1.02); /* Slight grow on hover */
+.btn-gold {
+    background-color: #c5a059;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: #b38f4d;
+    transform: scale(1.02);
 }
 
 /* Safari Support for Navigation Blur */
@@ -55,22 +53,24 @@ nav {
     transition: all 0.3s ease;
 }
 
-.map-iframe { border: 0; }
+.map-iframe {
+    border: 0;
+}
+
 
 /* =========================================
-   2. NEW ANIMATIONS & HOVER EFFECTS
+   2. ANIMATIONS & HOVER EFFECTS
    ========================================= */
 
 /* A. Practice Area Card Hover */
-/* Selects the white cards with the gold bottom border */
 #practice .bg-white {
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 #practice .bg-white:hover {
-    transform: translateY(-10px); /* Lifts card up */
+    transform: translateY(-10px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    border-color: #b38f4d; /* Darker gold on hover */
+    border-color: #b38f4d;
 }
 
 /* B. Navigation Link Underline Animation */
@@ -96,9 +96,17 @@ nav a:hover::after {
 
 /* C. Subtle Pulse for main CTA Button */
 @keyframes subtlePulse {
-    0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(197, 160, 89, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(197, 160, 89, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(197, 160, 89, 0);
+    }
 }
 
 /* Apply pulse only to the main Hero button */
@@ -107,87 +115,29 @@ nav a:hover::after {
 }
 
 /* D. Image Hover Effect */
-/* Makes the court image slightly brighten when hovered */
 .legal-bg img {
     transition: filter 0.5s ease;
 }
 
-/* Reduces the grayscale intensity */
 .legal-bg img:hover {
-    filter: grayscale(0.2); 
+    filter: grayscale(0.2);
 }
-
-/* Scroll to Top Button */
-#scrollTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 99;
-    border: none;
-    outline: none;
-    background-color: #c5a059; /* Your gold color */
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 4px;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-#scrollTopBtn:hover {
-    background-color: #b38f4d;
-    transform: translateY(-5px);
-}
-
-/* Base Styling */
-body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-h1, h2, h3, .font-serif { font-family: 'Crimson Pro', serif; }
-
-/* .legal-bg { 
-    background-color: #0f172a !important; 
-    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('./court.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-} */
-
-.gold-accent { color: #c5a059; }
-.btn-gold { background-color: #c5a059; color: white; transition: all 0.3s ease; }
-.btn-gold:hover { background-color: #b38f4d; transform: scale(1.02); }
 
 /* Card Animations */
 .transition-card {
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
+
 .transition-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* Nav Blur & Underline */
-nav { -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
-nav a { position: relative; }
-nav a::after {
-    content: ''; position: absolute; width: 0; height: 2px;
-    bottom: -2px; left: 0; background-color: #c5a059; transition: width 0.3s ease;
-}
-nav a:hover::after { width: 100%; }
-
-/* Scroll to Top Button */
-#scrollTopBtn {
-    display: none; position: fixed; bottom: 30px; right: 30px; z-index: 99;
-    border: none; background-color: #c5a059; color: white;
-    padding: 15px; border-radius: 4px; cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;
-}
-#scrollTopBtn:hover { background-color: #b38f4d; transform: translateY(-5px); }
-
+/* Footer Links */
 .footer-link {
     position: relative;
     text-decoration: none;
-    display: inline-block; /* Essential for absolute positioning of the line */
+    display: inline-block;
 }
 
 .footer-link::after {
@@ -199,7 +149,7 @@ nav a:hover::after { width: 100%; }
     left: 0;
     background-color: #f59e0b;
     transition: width 0.3s ease-in-out;
-    display: block; /* Forces the browser to treat it as a visible element */
+    display: block;
 }
 
 .footer-link:hover::after {
@@ -207,4 +157,411 @@ nav a:hover::after { width: 100%; }
 }
 
 
+/* =========================================
+   3. MODERN BUTTON HOVER ENHANCEMENTS
+   ========================================= */
 
+/* --- Shimmer keyframe (gold sweep across button) --- */
+@keyframes goldShimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* --- Ripple keyframe (circle burst on click) --- */
+@keyframes rippleBurst {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 
+   ── "Schedule Consultation" & all .btn-gold buttons ──
+   Modern: shimmer sweep + lift + deeper glow
+*/
+.btn-gold {
+    position: relative;
+    overflow: hidden;
+    transition:
+        background-color 0.35s ease,
+        transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease,
+        letter-spacing 0.25s ease;
+}
+
+/* Shimmer pseudo-element — slides across on hover */
+.btn-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.22) 50%,
+            transparent 70%);
+    background-size: 200% 100%;
+    background-position: -200% center;
+    transition: background-position 0.55s ease;
+    pointer-events: none;
+}
+
+.btn-gold:hover::before {
+    background-position: 200% center;
+}
+
+.btn-gold:hover {
+    background-color: #b38f4d;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+        0 8px 20px rgba(197, 160, 89, 0.5),
+        0 2px 6px rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.02em;
+}
+
+.btn-gold:active {
+    transform: translateY(-1px) scale(0.99);
+    box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+    transition-duration: 0.1s;
+}
+
+/* Ripple on click */
+.btn-gold .ripple {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: rippleBurst 0.55s linear;
+    pointer-events: none;
+    margin-left: -20px;
+    margin-top: -20px;
+}
+
+
+/* "Office Email" border */
+.legal-bg a.border {
+    position: relative;
+    overflow: hidden;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease;
+}
+
+/* Fill floods up from the bottom */
+.legal-bg a.border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(197, 160, 89, 0.18);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.legal-bg a.border:hover::before {
+    transform: scaleY(1);
+}
+
+.legal-bg a.border:hover {
+    border-color: #c5a059 !important;
+    color: #f0d080 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+}
+
+.legal-bg a.border:active {
+    transform: translateY(0);
+    box-shadow: none;
+    transition-duration: 0.1s;
+}
+
+
+/*
+   ── Form inputs, select, textarea: gold focus ring ──
+   Unchanged — already good
+*/
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea {
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus {
+    border-color: #c5a059;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.2);
+}
+
+
+/*
+   ── "Submit & Chat via WhatsApp" btn-gold in form ──
+   Modern: extra letter-spacing expansion + stronger lift
+*/
+#appointmentForm .btn-gold {
+    transition:
+        background-color 0.3s ease,
+        transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease,
+        letter-spacing 0.25s ease;
+}
+
+#appointmentForm .btn-gold:hover {
+    background-color: #b38f4d;
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 28px rgba(197, 160, 89, 0.5),
+        0 0 0 1px rgba(197, 160, 89, 0.2);
+    letter-spacing: 0.14em;
+}
+
+#appointmentForm .btn-gold:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(197, 160, 89, 0.3);
+    transition-duration: 0.1s;
+}
+
+
+/*
+   ── Scroll-to-Top button ──
+   Modern: bounce spring + gold halo ring
+*/
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #c5a059;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+        box-shadow 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #b38f4d;
+    transform: translateY(-7px);
+    box-shadow:
+        0 12px 28px rgba(197, 160, 89, 0.55),
+        0 0 0 4px rgba(197, 160, 89, 0.18);
+}
+
+#scrollTopBtn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(197, 160, 89, 0.3);
+    transition-duration: 0.1s;
+}
+
+
+/*
+   ── Footer contact links (email, WhatsApp "Chat Now") ──
+   Modern: gold color shift + subtle underline grow
+*/
+footer a:not(.footer-link) {
+    position: relative;
+    transition: color 0.25s ease, letter-spacing 0.2s ease;
+}
+
+footer a:not(.footer-link)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -1px;
+    left: 0;
+    background-color: #f0c040;
+    transition: width 0.3s ease;
+}
+
+footer a:not(.footer-link):hover {
+    color: #f0c040 !important;
+    letter-spacing: 0.03em;
+}
+
+footer a:not(.footer-link):hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   4. EXPERIENCE YEARS BADGE
+   Place this HTML snippet inside the #about .md:col-span-3 div,
+   right after the <p class="text-slate-300 ..."> paragraph
+   and before the <div class="flex flex-wrap gap-4 mt-4"> buttons:
+
+   <div class="exp-badge-row">
+       <div class="exp-badge">
+           <span class="exp-number">5<span class="exp-plus">+</span></span>
+           <span class="exp-label">Years of Practice</span>
+       </div>
+       <div class="exp-badge">
+           <span class="exp-number">200<span class="exp-plus">+</span></span>
+           <span class="exp-label">Cases Handled</span>
+       </div>
+       <div class="exp-badge">
+           <span class="exp-number">2</span>
+           <span class="exp-label">Courts Served</span>
+       </div>
+   </div>
+   ========================================= */
+
+.exp-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 20px 0 4px;
+}
+
+.exp-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 3px solid #c5a059;
+    padding-left: 14px;
+}
+
+.exp-number {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #c5a059;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.exp-plus {
+    font-size: 1.2rem;
+    vertical-align: super;
+    margin-left: 1px;
+}
+
+.exp-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    /* slate-400 */
+    margin-top: 4px;
+}
+
+/* Reduced motion — respects user accessibility settings */
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-gold,
+    .btn-gold::before,
+    .legal-bg a.border,
+    .legal-bg a.border::before,
+    #scrollTopBtn,
+    footer a:not(.footer-link),
+    .legal-bg .btn-gold {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+
+/* =========================================
+   6. FOOTER WHATSAPP "CHAT NOW" — ALWAYS HIGHLIGHTED
+   ========================================= */
+
+/* Always amber, never grey */
+.footer-wa-link {
+    color: #f59e0b;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.03em;
+    transition: color 0.25s ease, letter-spacing 0.2s ease;
+}
+
+.footer-wa-link:hover {
+    color: #fcd34d;
+    letter-spacing: 0.06em;
+}
+
+/* Pulsing live dot */
+.wa-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #25d366;
+    /* WhatsApp green */
+    flex-shrink: 0;
+    animation: waPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+
+/* =========================================
+   FOOTER WHATSAPP "CHAT NOW" — ALWAYS HIGHLIGHTED
+   ========================================= */
+
+/* Always amber gold — never grey */
+.footer-wa-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #f59e0b;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.25s ease, letter-spacing 0.2s ease;
+}
+
+.footer-wa-link:hover {
+    color: #fcd34d;
+    letter-spacing: 0.07em;
+}
+
+/* Pulsing green live dot */
+.wa-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #25d366;
+    flex-shrink: 0;
+    animation: waPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+    0%   { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0.65); }
+    70%  { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);    }
+    100% { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0);    }
+}
